@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Site Profissional - Site Express</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="form-page">
+    <div class="form-container">
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">1 de 5</div>
+        </div>
+
+        <!-- Formulário -->
+        <form id="stepForm" class="question-form">
+            <!-- Questão 1 -->
+            <div class="question active" data-question="1">
+                <a href="index.html" class="back-button">
+                    voltar
+                </a>
+                <div class="question-content">
+                    <h2>Qual é o seu nome?</h2>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            required 
+                            autocomplete="off"
+                            placeholder="Digite seu nome completo"
+                            minlength="3">
+                        <div class="input-focus"></div>
+                    </div>
+                </div>
+                <button type="button" class="next-btn" disabled>
+                    <span>Continuar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Questão 2 -->
+            <div class="question" data-question="2">
+                <div class="question-content">
+                    <h2>Qual é o seu melhor e-mail?</h2>
+                    <div class="input-wrapper">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            required 
+                            autocomplete="off"
+                            placeholder="exemplo@email.com">
+                        <div class="input-focus"></div>
+                    </div>
+                </div>
+                <button type="button" class="next-btn" disabled>
+                    <span>Continuar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Questão 3 -->
+            <div class="question" data-question="3">
+                <div class="question-content">
+                    <h2>Qual é o seu WhatsApp?</h2>
+                    <div class="input-wrapper">
+                        <input 
+                            type="tel" 
+                            id="whatsapp" 
+                            required 
+                            autocomplete="off"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15">
+                        <div class="input-focus"></div>
+                    </div>
+                </div>
+                <button type="button" class="next-btn" disabled>
+                    <span>Continuar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Questão 4 -->
+            <div class="question" data-question="4">
+                <div class="question-content">
+                    <h2>Qual é o nome do seu negócio?</h2>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="business-name" 
+                            required 
+                            autocomplete="off"
+                            placeholder="Nome do seu negócio"
+                            minlength="3">
+                        <div class="input-focus"></div>
+                    </div>
+                </div>
+                <button type="button" class="next-btn" disabled>
+                    <span>Continuar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Questão 5 -->
+            <div class="question" data-question="5">
+                <div class="question-content">
+                    <h2>Qual é o tipo do seu negócio?</h2>
+                    <div class="select-options">
+                        <div class="option" data-value="loja">
+                            <i class="fas fa-store"></i>
+                            <span>Loja</span>
+                        </div>
+                        <div class="option" data-value="servico">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Prestador de Serviço</span>
+                        </div>
+                        <div class="option" data-value="restaurante">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restaurante</span>
+                        </div>
+                        <div class="option" data-value="outro">
+                            <i class="fas fa-star"></i>
+                            <span>Outro</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" disabled>
+                    <span>Finalizar</span>
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Tela de Sucesso -->
+        <div class="success-screen" style="display: none;">
+            <div class="success-animation">
+                <div class="checkmark-circle">
+                    <div class="checkmark"></div>
+                </div>
+            </div>
+            <h2>Perfeito! 🎉</h2>
+            <p>Recebemos suas informações com sucesso.</p>
+            
+            <div class="summary-card">
+                <h3>Resumo das Informações</h3>
+                <div class="summary-content">
+                    <!-- Preenchido via JavaScript -->
+                </div>
+            </div>
+
+            <a href="#" class="whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Continuar no WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/form-script.js"></script>
+</body>
+</html> 
